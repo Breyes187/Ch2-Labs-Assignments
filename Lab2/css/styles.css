@@ -6,7 +6,7 @@ styles.css
 
 /* CSS Reset */
 
-body, header, nav, main, footer, img, h1, h3 {
+body, header, nav, main, footer, img, h1, h3, ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,6 +23,33 @@ img {
   display: block;
 }
 
+/* Style rule for mobile viewport*/
+
+
+/* Style rules to show mobile class and hide tab-desk class*/
+
+.mobile {
+  display: block;
+}
+
+.tab-desk {
+  display: none;
+}
+
+/* Style rules for header area */
+
+h1 {
+  padding: 2%;
+  text-align: center;
+  font-family: Emblema font;
+}
+
+h3 {
+  padding: 2%;
+  text-align: center;
+  font-family: Lora;
+}
+
 /* Style rules for the navigation area */
 
 nav {
@@ -31,12 +58,13 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
   text-align: center;
 }
 
 nav li {
-  display: inline-block;
+  display: block;
+  border-top: width 0.5px;
+  color: #f6eee4
   font-size: 1.5em;
   font-family: Geneva, Arial, sans-serif;
   font-weight: bold;
@@ -56,7 +84,6 @@ nav li a {
 
 main {
   padding: 2%;
-  font-family: Verdana, Arial, sans-serif;
 }
 
 main p {
@@ -82,6 +109,10 @@ main ul {
   font-size: 1.75em;
   font-weight: bold;
   text-align: center;
+}
+
+.round {
+  border-radius: 6px;
 }
 
 #contact {
