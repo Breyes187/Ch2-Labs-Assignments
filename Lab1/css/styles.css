@@ -140,36 +140,85 @@ footer a {
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 550px) print {
-}
+@media screen and (min-width: 550px) {
+  /* Tablet Viewport: Show tab-desk class, hide mobile class */
+  .tab-desk {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
 
-/* Tablet Viewport: Show tab-desk class, hide mobile class */
-.tab-desk {
-  display: block;
-}
-.mobile {
-  display: none;
-}
-/* Tablet Viewport: Style rule for header content */
-span.tab-desk {
-  display: inline;
-}
+  /* Tablet Viewport: Style rule for header content */
+  span.tab-desk {
+    display: inline;
+  }
 
-/* Tablet Viewport: Style rules for nav area */
-nav li {
+  /* Tablet Viewport: Style rules for nav area */
+  nav li {
     display: inline-block;
     border-top: none;
     border-right: 1px solid #e5e9fc;
     font-size: 1.5em;
-}
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
 
-nav li:last-child {
+  nav li:last-child {
     border-right: none;
+  }
+
+  /* Tablet Viewport Style Rule for Map */
+  .map {
+    width: 500px;
+    height: 450px;
+  }
 }
 
-nav li {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px) {
+  /* Desktop Viewport Style Rule for Header */
+  header {
+    padding: 2%;
+  }
+
+  /* Desktop Viewport Style Rules for Nav Area */
+  nav li {
+    padding: 0.5em 1.5em;
+  }
+
+  nav li:hover {
+    color: #373684;
+    background-color: #e5e9fc;
+  }
+}
+
+/* Desktop Viewport Style Rules for Main Content */
+ /* Add your styles for the main content here */
+ #Info ul {
+   margin-left: 5%;
+ }
+
+ main h3 {
+   font-size: 1.5em;
+ }
+
+ #Piano,
+ #Guitar,
+ #Violin {
+   width: 29%;
+   float: left;
+   margin: 0 2% 0 2%;
+ }
+}
+
+/* Media Query for Print */
+@media print {
+ /* Style rules for printing */
+ body {
+   background-color: #FFF;
+   color: #000;
+ }
 }
