@@ -198,3 +198,19 @@ footer a {
     margin-left: 5%;
   }
 }
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1927px) {
+  body {
+    background: linear-gradient(to bottom, #f6eee4, #78593A);
+  }
+
+  #wrapper {
+    width: 1120px;
+    margin: 0 auto;
+  }
+
+  main {
+    background-color: #f6eee4;
+  }
+}
