@@ -63,7 +63,7 @@ nav ul {
 
 nav li {
   display: block;
-  border-top: 0.5px solid #f6eee4; /* Specify border style */
+  border-top: 0.5px solid #f6eee4;
   color: #f6eee4;
   font-size: 1.5em;
   font-family: Geneva, Arial, sans-serif;
@@ -75,6 +75,7 @@ nav li a {
   color: #f6eee4;
   padding: 0.5em 2em;
   text-decoration: none;
+  font-weight: bold;
 }
 
 /* Style rules for main content */
@@ -140,10 +141,33 @@ footer {
   font-size: 0.85em;
   background-color: #2a1f14;
   color: #f6eee4;
-  padding: 1% 0; 
+  padding: 1% 0;
 }
 
 footer a {
   color: #f3e6d8;
   text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+/* Tablet Viewport Show Tab Desk Class Hide Mobile Class */
+/* Tablet Viewport style Rules for Nav Area */
+@media screen and (min-width: 620px) {
+  .tab-desk {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  nav li {
+    border-top: none;
+  }
+
+  nav li a {
+    display: inline-block;
+    font-size: 1.25em;
+    padding: 0.5em; 
+  }
 }
