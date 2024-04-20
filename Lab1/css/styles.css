@@ -130,7 +130,7 @@ main p {
   text-align: center;
 }
 
-#contact a {
+#contact a, #rental h2 {
   color: #4645a8;
   text-decoration: none;
   font-weight: bold;
@@ -156,6 +156,35 @@ main p {
   border: 5px solid #373684;
   width: 95%;
   height: 50%;
+}
+
+/* Style rules for table */
+table {
+  border: 1px solid #373684;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+}
+
+caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1%;
+}
+
+th, td {
+  border: 1px solid #373684;
+  padding: 2%;
+}
+
+th {
+  background-color: #373684;
+  color: #fff;
+  font-size: 1.15em;
+}
+
+tr:nth-child(odd) {
+  background-color: #b7b7e1;
 }
 
 /* Style rules for footer content */
@@ -258,14 +287,16 @@ footer a {
    font-size: 1.5em;
  }
 
- #piano,
- #guitar,
- #violin {
+ #piano, #guitar, #violin {
    width: 29%;
    float: left;
    margin: 0 2% 0 2%;
  }
-}
+
+ /* Desktop Viewport: Style Rules for Table */
+  table {
+    width: 70%;
+  }
 
 /* Media Query for Print */
 @media print {
@@ -274,4 +305,5 @@ footer a {
    background-color: #FFF;
    color: #000;
  }
+
 }
