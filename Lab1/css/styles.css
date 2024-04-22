@@ -55,6 +55,33 @@ figcaption {
 .tab-desk {
   display: none;
 }
+
+/* Media Query for Mobile Viewport */
+@media screen and (max-width: 480px) {
+    /* Style Rule for Form Elements */
+    fieldset, input {
+        margin-bottom: 2%;
+    }
+
+    fieldset legend {
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+
+    label {
+        display: block;
+        padding-top: 3%;
+    }
+
+    #submit {
+        margin: 0 auto;
+        display: block;
+        padding: 3%;
+        background-color: #B7B7E1;
+        font-size: 1em;
+    }
+}
+
 /* Style rules for header content */
 header {
   text-align: center;
@@ -239,6 +266,12 @@ footer a {
     border-right: none;
   }
 
+  /* Tablet Viewport Style Rule for the Form Element */
+   form {
+     width: 70%;
+     margin: 0 auto;
+   }
+   
   /* Tablet Viewport Style Rule for Map */
   .map {
     width: 500px;
@@ -248,6 +281,17 @@ footer a {
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 769px) {
+  /* Desktop Viewport Style Rules for Form Elements */
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto; /* Sets 2-column layout */
+      grid-gap: 20px; /* Grid gap of 20 pixels */
+    }
+
+    .btn {
+      grid-column: 1 / 2; /* Position the button to span from grid line 1 to 2 */
+    }
+
   /* Desktop Viewport Style Rule for Header */
   header {
     padding: 2%;
