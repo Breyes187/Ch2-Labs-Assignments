@@ -4,7 +4,7 @@
   template.html
   2/14/2024
   -->
-  <html lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Contact</title>
@@ -12,41 +12,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;700;1,400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="image/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
-  <link rel="icon" sizes="192x192" href="image/android-chrome-192.png"> 
+  <link rel="icon" sizes="192x192" href="image/android-chrome-192.png">
 </head>
 <body>
-    <div id="wrapper">
-  <header>
-    <div class="tab-desk">
-      <img src="image/baby-hawk.jpg" alt="Rescued baby hawk">
-    </div>
-    <div class="mobile">
-      <h1>&#128062; Wild Rescues</h1>
-      <h3>Rescue. Rehabilitate. Release.</h3>
-    </div>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html">About Us</a></li>
-      <li><a href="Partnership.html">Partnership</a></li>
-      <li><a href="Gallery.html">Gallery</a></li>
-      <li><a href="faqs.html">FAQs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div>
-    <p class="tel-link-round-mobile"><a href="tel:8455559228">(845)555-9228</a></p>
-    <p class="tab-desk">(814) 555-9228</p>
-    <p>Email: <a href="mailto:contact@wildrescues.net" target="_blank">contact@wildrescues.net</a></p>
-    <p>Address: 8989 Rescue Drive, Ocala, FL 34471</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114107.55146726733!2d-81.17400531043313!3d26.652933110739042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dbec483af0bbbb%3A0x181c5353cfa53d9d!2sMontura%2C%20FL%2033440!5e0!3m2!1sen!2sus!4v1711501169878!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</body>
-</html>
+  <div id="wrapper">
+    <header>
+      <div class="tab-desk">
+        <img src="image/baby-hawk.jpg" alt="Rescued baby hawk">
+      </div>
+      <div class="mobile">
+        <h1>&#128062; Wild Rescues</h1>
+        <h3>Rescue. Rehabilitate. Release.</h3>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="partnership.html">Partnership</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div>
+        <p class="tel-link-round-mobile"><a href="tel:8455559228">(845)555-9228</a></p>
+        <p class="tab-desk">(814) 555-9228</p>
+        <p>Email: <a href="mailto:contact@wildrescues.net" target="_blank">contact@wildrescues.net</a></p>
+        <p>Address: 8989 Rescue Drive, Ocala, FL 34471</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114107.55146726733!2d-81.17400531043313!3d26.652933110739042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dbec483af0bbbb%3A0x181c5353cfa53d9d!2sMontura%2C%20FL%2033440!5e0!3m2!1sen!2sus!4v1711501169878!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div id="form">
+        <h2>Complete the form below, and we will contact you soon.</h2>
+        <form class="form grid">
+          <fieldset>
+            <legend>Contact Information</legend>
+            <label for="FNAME">FIRST NAME</label>
+            <input type="text" name="FNAME" id="FNAME">
+            <label for="1NAME">LAST NAME</label>
+            <input type="text" name="1NAME" id="1NAME">
+            <label for="BNAME">NAME OF BUSINESS</label>
+            <input type="text" name="BNAME" id="BNAME">
+            <label for="EMAIL">EMAIL</label>
+            <input type="email" name="EMAIL" id="EMAIL">
+            <label for="PHONE">PHONE</label>
+            <input type="tel" name="PHONE" id="PHONE">
+          </fieldset>
+          <fieldset>
+            <legend>Additional Information</legend>
+            <p>I would like more information about:</p>
+            <label for="VOL">
+              <input type="radio" name="info" id="VOL" value="volunteering">
+              volunteering
+            </label>
+            <label for="sponsor">
+              <input type="radio" name="info" id="sponsor" value="sponsorship opportunities">
+              sponsorship opportunities
+            </label>
+            <label for="wild">
+              <input type="radio" name="info" id="wild" value="wildlife">
+              wildlife
+            </label>
+            <label for="other">

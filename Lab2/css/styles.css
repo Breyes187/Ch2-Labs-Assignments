@@ -5,15 +5,14 @@ styles.css
 */
 
 /* CSS Reset */
-
-body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption {
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, fieldset, label, input, button, textarea {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 /* Style rules for body and images */
-
 body {
   background-color: #f6eee4;
 }
@@ -23,35 +22,29 @@ img {
   display: block;
 }
 
-/* Style rules for mobile viewport*/
-
-
-/* Style rules to show mobile class and hide tab-desk class*/
-
-.mobile {
+/* Responsive display settings */
+.mobile, .mobile-tablet {
   display: block;
 }
 
-.tab-desk {
+.tab-desk, .desktop {
   display: none;
 }
 
-/* Style rules for header area */
-
-h1 {
+/* Header styles */
+header h1 {
   padding: 2%;
   text-align: center;
   font-family: 'Emblema One', sans-serif;
 }
 
-h3 {
+header h3 {
   padding: 2%;
   text-align: center;
   font-family: 'Lora', serif;
 }
 
-/* Style rules for the navigation area */
-
+/* Navigation styles */
 nav {
   background-color: #2a1f14;
 }
@@ -63,11 +56,10 @@ nav ul {
 
 nav li {
   display: inline-block;
-  border-top: 0.5px solid #f6eee4;
   color: #f6eee4;
   font-size: 1.5em;
-  font-family: Geneva, Arial, sans-serif;
   font-weight: bold;
+  border-top: 0.5px solid #f6eee4; /* Mobile-only style, removed in tablet and desktop */
 }
 
 nav li a {
@@ -75,45 +67,41 @@ nav li a {
   color: #f6eee4;
   padding: 0.5em 2em;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* Style rules for main content */
-
+/* Main content area */
 main {
   padding: 2%;
 }
 
-main p {
+main p, main h3, main ul {
   font-size: 1.25em;
-}
-
-main h3 {
-  padding-top: 2%;
 }
 
 main ul {
   list-style-type: square;
 }
 
-.link {
-  color: #4d3319;
+/* Form and interaction styles */
+.action, .link, .round {
+  text-align: center;
   text-decoration: none;
   font-weight: bold;
+}
+
+.link {
+  color: #4d3319;
   font-style: italic;
 }
 
 .action {
   font-size: 1.75em;
-  font-weight: bold;
-  text-align: center;
 }
 
 .round {
   border-radius: 6px;
 }
 
-/* New style rule for the aside element */
 aside {
   text-align: center;
   font-size: 1.5em;
@@ -121,26 +109,22 @@ aside {
   text-shadow: 4px 4px 10px #c5a687;
 }
 
-/* New style rule for the figure element */
-figure {
+figure, figcaption {
   border: 4px solid #2A1F14;
   box-shadow: 6px 6px 10px #C58687;
-  max-width: 400px;
-  margin: 2% auto;
 }
 
-/* New style rule for the figcaption element */
 figcaption {
   padding: 2%;
-  border-top: 4px solid #2A1F14;
 }
 
 #info ul {
   margin-left: 10%;
 }
 
-#contact {
+#contact, #form h2 {
   text-align: center;
+  font-size: 1.5em;
 }
 
 .tel-link {
@@ -156,8 +140,7 @@ figcaption {
   font-weight: bold;
 }
 
-/* Style rules for footer content */
-
+/* Footer styles */
 footer {
   text-align: center;
   font-size: 0.85em;
@@ -171,81 +154,84 @@ footer a {
   text-decoration: none;
 }
 
-/* Media Query for Tablet Viewport */
-/* Tablet Viewport Show Tab Desk Class Hide Mobile Class */
-/* Tablet Viewport style Rules for Nav Area */
+/* Media Queries */
 @media screen and (min-width: 620px) {
   .tab-desk {
     display: block;
   }
 
-  .mobile {
+  .mobile, .mobile-tablet {
     display: none;
   }
 
   nav li {
     border-top: none;
+    display: inline-block;
+    padding: 0.5em;
+    font-size: 1.25em;
   }
 
-  nav li a {
-    display: inline-block;
-    font-size: 1.25em;
-    padding: 0.5em;
-  }
-  /* New style rule for the grid class selector */
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
 
-  /* New style rule for the side element */
   .side {
     grid-column: 1 / span 2;
   }
+
+  .form {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
-/* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px) {
-  /* Desktop Viewport Style Rules for Nav Area */
-  /* Style Rule for the Nav li Selector */
-  nav li {
-    font-size: 1.5em;
+  .desktop {
+    display: block;
   }
 
-  /* Style Rule for the Nav li a Selector */
-  nav li a {
+  .mobile, .mobile-tablet {
+    display: none;
+  }
+
+  nav li {
+    font-size: 1.5em;
     padding: 0.5em 1.5em;
   }
 
-  /* Style Rule for the Nav li a Selector with Hover Pseudo Class */
   nav li a:hover {
     color: #2a1f14;
     background-color: #f6eee4;
     opacity: 0.5;
   }
-  /* New style rule for the grid class selector */
+
   .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
   }
 
-  /* New style rule for the aside element */
   aside {
-    grid-column: 1 / span 3; /* span 3 columns */
-    font-size: 2em; /* set font size to 2em */
+    grid-column: 1 / span 3;
+    font-size: 2em;
+  }
+
+  .form {
+    width: auto;
+  }
+
+  .form.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
+  .btn {
+    grid-column: 1 / span 2;
   }
 }
 
-/* Desktop Viewport Style Rule for Main Content */
-  /* Style Rule for the #info ul Selector */
-  #info ul {
-    margin-left: 5%;
-  }
-}
-
-/* Media Query for Large Desktop Viewports */
 @media screen and (min-width: 1927px) {
   body {
     background: linear-gradient(to bottom, #f6eee4, #78593A);
@@ -259,20 +245,17 @@ footer a {
   main {
     background-color: #f6eee4;
   }
-  /* New style rule for the grid class selector */
+
   .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4-column layout */
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  /* New style rule for the aside element */
   aside {
-    grid-column: 1 / span 4; /* span 4 columns */
-    font-size: 3em; /* set font size to 3em */
+    grid-column: 1 / span 4;
+    font-size: 3em;
   }
 }
 
-/* Media Query for Print */
 @media print {
   body {
     background-color: white;
