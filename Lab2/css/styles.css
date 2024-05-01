@@ -5,7 +5,7 @@ styles.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, fieldset, label, input, button, textarea {
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, fieldset, label, input, button, textarea, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -13,6 +13,10 @@ body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, fie
 }
 
 /* Style rules for body and images */
+video{
+  
+}
+
 body {
   background-color: #f6eee4;
 }
